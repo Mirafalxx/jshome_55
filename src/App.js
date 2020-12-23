@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const INGREDIENTS = [
+  { name: "Meat", price: 50 },
+  { name: "Cheese", price: 20 },
+  { name: "Salad", price: 5 },
+  { name: "Bacon", price: 30 },
+];
+const App = () => {
+  const [ingredients, setIngredients] = useState([
+    { name: "Meat", count: 0 },
+    { name: "Cheese", count: 0 },
+    { name: "Salad", count: 0 },
+    { name: "Bacon", count: 0 },
+  ]);
+  const [price, setPrice] = useState(0);
+  return <div className="App"></div>;
+};
 
 export default App;
